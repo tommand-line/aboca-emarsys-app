@@ -90,22 +90,15 @@ x-frame-options: DENY</code></pre>
     Learn more about
     <a href="https://vercel.com/docs/concepts/functions/edge-middleware">Vercel Edge Middleware</a>.
   </p>
-  <button>
-    <p>Prova Bottone</p>
-  </button>
+  <button onclick="sendEvents()">Prova Bottone</button>
 </body>
 
 <script type="text/javascript">
-  var element = document.getElementsByTagName("button");
-
-  console.log('pressed');
-
-  element.addEventListener("click", function () {
+  function sendEvents() {
     ScarabQueue.push(['setCustomerId', 'ef4656c5-5cc1-4100-81d1-994f8b31210d']);
     ScarabQueue.push(['view', 'FINASPX']);
     ScarabQueue.push(['go']);
-  });
-
+  }
 </script>
 
 </html>
