@@ -96,9 +96,14 @@ x-frame-options: DENY</code></pre>
 </body>
 
 <script type="text/javascript">
-  ScarabQueue.push(['setEmail', 'r.rosiello@reply.it']);
+  var element = document.getElementsByTagName("button");
 
-  ScarabQueue.push(['go']);
+  element.addEventListener("click", function () {
+    ScarabQueue.push(['setCustomerId', 'ef4656c5-5cc1-4100-81d1-994f8b31210d']);
+    ScarabQueue.push(['view', 'FINASPX']);
+    ScarabQueue.push(['go']);
+  });
+
 </script>
 
 </html>
