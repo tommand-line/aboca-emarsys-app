@@ -90,149 +90,49 @@ x-frame-options: DENY</code></pre>
     Learn more about
     <a href="https://vercel.com/docs/concepts/functions/edge-middleware">Vercel Edge Middleware</a>.
   </p>
-  <button onclick="sendEvents()">Prova Bottone</button>
-  <form name="ProfileForm" onsubmit="return CheckInputs();" action="https://link.lamarzocco.com/u/register.php" method=get>
-    <input type=hidden name="CID" value="790451822"><input type=hidden name="SID" value="<? echo $SID; ?>"><input type=hidden name="UID" value="<? echo $UID; ?>"><input type=hidden name="f" value="837"><input type=hidden name="p" value="2"><input type=hidden name="a" value="r"><input type=hidden name="el" value="<? echo $el; ?>"><input type=hidden name="llid" value="<? echo $llid; ?>"><input type=hidden name="c" value="<? echo $c; ?>"><input type=hidden name="counted" value="<? echo $counted; ?>"><input type=hidden name="RID" value="<? echo $RID; ?>"><input type=hidden name="mailnow" value="<? echo $mailnow; ?>">First Name:<input type=text name="inp_1" maxlength=60 value="<? echo $inp_1; ?>"><br>
-    Last Name:<input type=text name="inp_2" maxlength=60 value="<? echo $inp_2; ?>"><br>
-    Email:<input type=text name="inp_3" maxlength=255 value="<? echo $inp_3; ?>"><br>
-    Mobile:<input type=text name="inp_37" maxlength=60 value="<? echo $inp_37; ?>"><br>
-    Country or region:<select name="inp_14" size=1><option value=""> </option><option value="10"<? echo $inp_14=="Austria" ? " SELECTED" : ""; ?>>Austria</option><option value="65"<? echo $inp_14=="Germany" ? " SELECTED" : ""; ?>>Germany</option><option value="168"<? echo $inp_14=="Switzerland" ? " SELECTED" : ""; ?>>Switzerland</option><option value="100"<? echo $inp_14=="Liechtenstein" ? " SELECTED" : ""; ?>>Liechtenstein</option><option value="1"<? echo $inp_14=="Afghanistan" ? " SELECTED" : ""; ?>>Afghanistan</option><option value="2"<? echo $inp_14=="Albania" ? " SELECTED" : ""; ?>>Albania</option><option value="3"<? echo $inp_14=="Algeria" ? " SELECTED" : ""; ?>>Algeria</option><option value="4"<? echo $inp_14=="Andorra" ? " SELECTED" : ""; ?>>Andorra</option><option value="5"<? echo $inp_14=="Angola" ? " SELECTED" : ""; ?>>Angola</option><option value="6"<? echo $inp_14=="Antigua and Barbuda" ? " SELECTED" : ""; ?>>Antigua and Barbuda</option><option value="7"<? echo $inp_14=="Argentina" ? " SELECTED" : ""; ?>>Argentina</option><option value="8"<? echo $inp_14=="Armenia" ? " SELECTED" : ""; ?>>Armenia</option><option value="9"<? echo $inp_14=="Australia" ? " SELECTED" : ""; ?>>Australia</option><option value="11"<? echo $inp_14=="Azerbaijan" ? " SELECTED" : ""; ?>>Azerbaijan</option><option value="12"<? echo $inp_14=="Bahamas" ? " SELECTED" : ""; ?>>Bahamas</option><option value="13"<? echo $inp_14=="Bahrain" ? " SELECTED" : ""; ?>>Bahrain</option><option value="14"<? echo $inp_14=="Bangladesh" ? " SELECTED" : ""; ?>>Bangladesh</option><option value="15"<? echo $inp_14=="Barbados" ? " SELECTED" : ""; ?>>Barbados</option><option value="16"<? echo $inp_14=="Belarus" ? " SELECTED" : ""; ?>>Belarus</option><option value="17"<? echo $inp_14=="Belgium" ? " SELECTED" : ""; ?>>Belgium</option><option value="18"<? echo $inp_14=="Belize" ? " SELECTED" : ""; ?>>Belize</option><option value="19"<? echo $inp_14=="Benin" ? " SELECTED" : ""; ?>>Benin</option><option value="20"<? echo $inp_14=="Bhutan" ? " SELECTED" : ""; ?>>Bhutan</option><option value="21"<? echo $inp_14=="Bolivia" ? " SELECTED" : ""; ?>>Bolivia</option><option value="22"<? echo $inp_14=="Bosnia and Herzegovina" ? " SELECTED" : ""; ?>>Bosnia and Herzegovina</option><option value="23"<? echo $inp_14=="Botswana" ? " SELECTED" : ""; ?>>Botswana</option><option value="24"<? echo $inp_14=="Brazil" ? " SELECTED" : ""; ?>>Brazil</option><option value="25"<? echo $inp_14=="Brunei Darussalam" ? " SELECTED" : ""; ?>>Brunei Darussalam</option><option value="26"<? echo $inp_14=="Bulgaria" ? " SELECTED" : ""; ?>>Bulgaria</option><option value="27"<? echo $inp_14=="Burkina Faso" ? " SELECTED" : ""; ?>>Burkina Faso</option><option value="28"<? echo $inp_14=="Burma" ? " SELECTED" : ""; ?>>Burma</option><option value="29"<? echo $inp_14=="Burundi" ? " SELECTED" : ""; ?>>Burundi</option><option value="30"<? echo $inp_14=="Cambodia" ? " SELECTED" : ""; ?>>Cambodia</option><option value="31"<? echo $inp_14=="Cameroon" ? " SELECTED" : ""; ?>>Cameroon</option><option value="32"<? echo $inp_14=="Canada" ? " SELECTED" : ""; ?>>Canada</option><option value="201"<? echo $inp_14=="Canary Islands" ? " SELECTED" : ""; ?>>Canary Islands</option><option value="33"<? echo $inp_14=="Cape Verde" ? " SELECTED" : ""; ?>>Cape Verde</option><option value="34"<? echo $inp_14=="Central African Republic" ? " SELECTED" : ""; ?>>Central African Republic</option><option value="35"<? echo $inp_14=="Chad" ? " SELECTED" : ""; ?>>Chad</option><option value="36"<? echo $inp_14=="Chile" ? " SELECTED" : ""; ?>>Chile</option><option value="37"<? echo $inp_14=="China" ? " SELECTED" : ""; ?>>China</option><option value="38"<? echo $inp_14=="Colombia" ? " SELECTED" : ""; ?>>Colombia</option><option value="39"<? echo $inp_14=="Comoros" ? " SELECTED" : ""; ?>>Comoros</option><option value="40"<? echo $inp_14=="Congo" ? " SELECTED" : ""; ?>>Congo</option><option value="41"<? echo $inp_14=="Congo, Democratic Republic of the" ? " SELECTED" : ""; ?>>Congo, Democratic Republic of the</option><option value="42"<? echo $inp_14=="Costa Rica" ? " SELECTED" : ""; ?>>Costa Rica</option><option value="43"<? echo $inp_14=="Cote d'Ivoire" ? " SELECTED" : ""; ?>>Cote d'Ivoire</option><option value="44"<? echo $inp_14=="Croatia" ? " SELECTED" : ""; ?>>Croatia</option><option value="45"<? echo $inp_14=="Cuba" ? " SELECTED" : ""; ?>>Cuba</option><option value="46"<? echo $inp_14=="Cyprus" ? " SELECTED" : ""; ?>>Cyprus</option><option value="47"<? echo $inp_14=="Czech Republic" ? " SELECTED" : ""; ?>>Czech Republic</option><option value="48"<? echo $inp_14=="Denmark" ? " SELECTED" : ""; ?>>Denmark</option><option value="49"<? echo $inp_14=="Djibouti" ? " SELECTED" : ""; ?>>Djibouti</option><option value="50"<? echo $inp_14=="Dominica" ? " SELECTED" : ""; ?>>Dominica</option><option value="51"<? echo $inp_14=="Dominican Republic" ? " SELECTED" : ""; ?>>Dominican Republic</option><option value="258"<? echo $inp_14=="East Timor" ? " SELECTED" : ""; ?>>East Timor</option><option value="52"<? echo $inp_14=="Ecuador" ? " SELECTED" : ""; ?>>Ecuador</option><option value="53"<? echo $inp_14=="Egypt" ? " SELECTED" : ""; ?>>Egypt</option><option value="54"<? echo $inp_14=="El Salvador" ? " SELECTED" : ""; ?>>El Salvador</option><option value="55"<? echo $inp_14=="Equatorial Guinea" ? " SELECTED" : ""; ?>>Equatorial Guinea</option><option value="56"<? echo $inp_14=="Eritrea" ? " SELECTED" : ""; ?>>Eritrea</option><option value="57"<? echo $inp_14=="Estonia" ? " SELECTED" : ""; ?>>Estonia</option><option value="58"<? echo $inp_14=="Ethiopia" ? " SELECTED" : ""; ?>>Ethiopia</option><option value="59"<? echo $inp_14=="Fiji" ? " SELECTED" : ""; ?>>Fiji</option><option value="60"<? echo $inp_14=="Finland" ? " SELECTED" : ""; ?>>Finland</option><option value="61"<? echo $inp_14=="France" ? " SELECTED" : ""; ?>>France</option><option value="62"<? echo $inp_14=="Gabon" ? " SELECTED" : ""; ?>>Gabon</option><option value="63"<? echo $inp_14=="Gambia, The" ? " SELECTED" : ""; ?>>Gambia, The</option><option value="64"<? echo $inp_14=="Georgia" ? " SELECTED" : ""; ?>>Georgia</option><option value="66"<? echo $inp_14=="Ghana" ? " SELECTED" : ""; ?>>Ghana</option><option value="203"<? echo $inp_14=="Gibraltar" ? " SELECTED" : ""; ?>>Gibraltar</option><option value="67"<? echo $inp_14=="Greece" ? " SELECTED" : ""; ?>>Greece</option><option value="198"<? echo $inp_14=="Greenland" ? " SELECTED" : ""; ?>>Greenland</option><option value="68"<? echo $inp_14=="Grenada" ? " SELECTED" : ""; ?>>Grenada</option><option value="69"<? echo $inp_14=="Guatemala" ? " SELECTED" : ""; ?>>Guatemala</option><option value="70"<? echo $inp_14=="Guinea" ? " SELECTED" : ""; ?>>Guinea</option><option value="71"<? echo $inp_14=="Guinea-Bissau" ? " SELECTED" : ""; ?>>Guinea-Bissau</option><option value="72"<? echo $inp_14=="Guyana" ? " SELECTED" : ""; ?>>Guyana</option><option value="73"<? echo $inp_14=="Haiti" ? " SELECTED" : ""; ?>>Haiti</option><option value="74"<? echo $inp_14=="Honduras" ? " SELECTED" : ""; ?>>Honduras</option><option value="205"<? echo $inp_14=="Hong Kong" ? " SELECTED" : ""; ?>>Hong Kong</option><option value="75"<? echo $inp_14=="Hungary" ? " SELECTED" : ""; ?>>Hungary</option><option value="76"<? echo $inp_14=="Iceland" ? " SELECTED" : ""; ?>>Iceland</option><option value="77"<? echo $inp_14=="India" ? " SELECTED" : ""; ?>>India</option><option value="78"<? echo $inp_14=="Indonesia" ? " SELECTED" : ""; ?>>Indonesia</option><option value="79"<? echo $inp_14=="Iran" ? " SELECTED" : ""; ?>>Iran</option><option value="80"<? echo $inp_14=="Iraq" ? " SELECTED" : ""; ?>>Iraq</option><option value="81"<? echo $inp_14=="Ireland" ? " SELECTED" : ""; ?>>Ireland</option><option value="82"<? echo $inp_14=="Israel" ? " SELECTED" : ""; ?>>Israel</option><option value="83"<? echo $inp_14=="Italy" ? " SELECTED" : ""; ?>>Italy</option><option value="84"<? echo $inp_14=="Jamaica" ? " SELECTED" : ""; ?>>Jamaica</option><option value="85"<? echo $inp_14=="Japan" ? " SELECTED" : ""; ?>>Japan</option><option value="86"<? echo $inp_14=="Jordan" ? " SELECTED" : ""; ?>>Jordan</option><option value="87"<? echo $inp_14=="Kazakhstan" ? " SELECTED" : ""; ?>>Kazakhstan</option><option value="88"<? echo $inp_14=="Kenya" ? " SELECTED" : ""; ?>>Kenya</option><option value="89"<? echo $inp_14=="Kiribati" ? " SELECTED" : ""; ?>>Kiribati</option><option value="90"<? echo $inp_14=="Korea, North" ? " SELECTED" : ""; ?>>Korea, North</option><option value="91"<? echo $inp_14=="Korea, South" ? " SELECTED" : ""; ?>>Korea, South</option><option value="259"<? echo $inp_14=="Kosovo" ? " SELECTED" : ""; ?>>Kosovo</option><option value="92"<? echo $inp_14=="Kuwait" ? " SELECTED" : ""; ?>>Kuwait</option><option value="93"<? echo $inp_14=="Kyrgyzstan" ? " SELECTED" : ""; ?>>Kyrgyzstan</option><option value="94"<? echo $inp_14=="Laos" ? " SELECTED" : ""; ?>>Laos</option><option value="95"<? echo $inp_14=="Latvia" ? " SELECTED" : ""; ?>>Latvia</option><option value="96"<? echo $inp_14=="Lebanon" ? " SELECTED" : ""; ?>>Lebanon</option><option value="97"<? echo $inp_14=="Lesotho" ? " SELECTED" : ""; ?>>Lesotho</option><option value="98"<? echo $inp_14=="Liberia" ? " SELECTED" : ""; ?>>Liberia</option><option value="99"<? echo $inp_14=="Libya" ? " SELECTED" : ""; ?>>Libya</option><option value="101"<? echo $inp_14=="Lithuania" ? " SELECTED" : ""; ?>>Lithuania</option><option value="102"<? echo $inp_14=="Luxembourg" ? " SELECTED" : ""; ?>>Luxembourg</option><option value="206"<? echo $inp_14=="Macau" ? " SELECTED" : ""; ?>>Macau</option><option value="103"<? echo $inp_14=="Macedonia" ? " SELECTED" : ""; ?>>Macedonia</option><option value="104"<? echo $inp_14=="Madagascar" ? " SELECTED" : ""; ?>>Madagascar</option><option value="105"<? echo $inp_14=="Malawi" ? " SELECTED" : ""; ?>>Malawi</option><option value="106"<? echo $inp_14=="Malaysia" ? " SELECTED" : ""; ?>>Malaysia</option><option value="107"<? echo $inp_14=="Maldives" ? " SELECTED" : ""; ?>>Maldives</option><option value="108"<? echo $inp_14=="Mali" ? " SELECTED" : ""; ?>>Mali</option><option value="109"<? echo $inp_14=="Malta" ? " SELECTED" : ""; ?>>Malta</option><option value="110"<? echo $inp_14=="Marshall Islands" ? " SELECTED" : ""; ?>>Marshall Islands</option><option value="111"<? echo $inp_14=="Mauritania" ? " SELECTED" : ""; ?>>Mauritania</option><option value="112"<? echo $inp_14=="Mauritius" ? " SELECTED" : ""; ?>>Mauritius</option><option value="113"<? echo $inp_14=="Mexico" ? " SELECTED" : ""; ?>>Mexico</option><option value="114"<? echo $inp_14=="Micronesia" ? " SELECTED" : ""; ?>>Micronesia</option><option value="115"<? echo $inp_14=="Moldova" ? " SELECTED" : ""; ?>>Moldova</option><option value="116"<? echo $inp_14=="Monaco" ? " SELECTED" : ""; ?>>Monaco</option><option value="117"<? echo $inp_14=="Mongolia" ? " SELECTED" : ""; ?>>Mongolia</option><option value="202"<? echo $inp_14=="Montenegro" ? " SELECTED" : ""; ?>>Montenegro</option><option value="118"<? echo $inp_14=="Morocco" ? " SELECTED" : ""; ?>>Morocco</option><option value="119"<? echo $inp_14=="Mozambique" ? " SELECTED" : ""; ?>>Mozambique</option><option value="120"<? echo $inp_14=="Myanmar" ? " SELECTED" : ""; ?>>Myanmar</option><option value="121"<? echo $inp_14=="Namibia" ? " SELECTED" : ""; ?>>Namibia</option><option value="122"<? echo $inp_14=="Nauru" ? " SELECTED" : ""; ?>>Nauru</option><option value="123"<? echo $inp_14=="Nepal" ? " SELECTED" : ""; ?>>Nepal</option><option value="204"<? echo $inp_14=="Netherlands Antilles" ? " SELECTED" : ""; ?>>Netherlands Antilles</option><option value="125"<? echo $inp_14=="New Zealand" ? " SELECTED" : ""; ?>>New Zealand</option><option value="126"<? echo $inp_14=="Nicaragua" ? " SELECTED" : ""; ?>>Nicaragua</option><option value="127"<? echo $inp_14=="Niger" ? " SELECTED" : ""; ?>>Niger</option><option value="128"<? echo $inp_14=="Nigeria" ? " SELECTED" : ""; ?>>Nigeria</option><option value="129"<? echo $inp_14=="Norway" ? " SELECTED" : ""; ?>>Norway</option><option value="130"<? echo $inp_14=="Oman" ? " SELECTED" : ""; ?>>Oman</option><option value="131"<? echo $inp_14=="Pakistan" ? " SELECTED" : ""; ?>>Pakistan</option><option value="132"<? echo $inp_14=="Palau" ? " SELECTED" : ""; ?>>Palau</option><option value="133"<? echo $inp_14=="Palestine" ? " SELECTED" : ""; ?>>Palestine</option><option value="134"<? echo $inp_14=="Panama" ? " SELECTED" : ""; ?>>Panama</option><option value="135"<? echo $inp_14=="Papua New Guinea" ? " SELECTED" : ""; ?>>Papua New Guinea</option><option value="136"<? echo $inp_14=="Paraguay" ? " SELECTED" : ""; ?>>Paraguay</option><option value="137"<? echo $inp_14=="Peru" ? " SELECTED" : ""; ?>>Peru</option><option value="138"<? echo $inp_14=="Philippines" ? " SELECTED" : ""; ?>>Philippines</option><option value="139"<? echo $inp_14=="Poland" ? " SELECTED" : ""; ?>>Poland</option><option value="140"<? echo $inp_14=="Portugal" ? " SELECTED" : ""; ?>>Portugal</option><option value="141"<? echo $inp_14=="Qatar" ? " SELECTED" : ""; ?>>Qatar</option><option value="142"<? echo $inp_14=="Romania" ? " SELECTED" : ""; ?>>Romania</option><option value="143"<? echo $inp_14=="Russia" ? " SELECTED" : ""; ?>>Russia</option><option value="144"<? echo $inp_14=="Rwanda" ? " SELECTED" : ""; ?>>Rwanda</option><option value="148"<? echo $inp_14=="Samoa" ? " SELECTED" : ""; ?>>Samoa</option><option value="149"<? echo $inp_14=="San Marino" ? " SELECTED" : ""; ?>>San Marino</option><option value="150"<? echo $inp_14=="São Tomé and Príncipe" ? " SELECTED" : ""; ?>>São Tomé and Príncipe</option><option value="151"<? echo $inp_14=="Saudi Arabia" ? " SELECTED" : ""; ?>>Saudi Arabia</option><option value="152"<? echo $inp_14=="Senegal" ? " SELECTED" : ""; ?>>Senegal</option><option value="153"<? echo $inp_14=="Serbia" ? " SELECTED" : ""; ?>>Serbia</option><option value="154"<? echo $inp_14=="Seychelles" ? " SELECTED" : ""; ?>>Seychelles</option><option value="155"<? echo $inp_14=="Sierra Leone" ? " SELECTED" : ""; ?>>Sierra Leone</option><option value="156"<? echo $inp_14=="Singapore" ? " SELECTED" : ""; ?>>Singapore</option><option value="157"<? echo $inp_14=="Slovakia" ? " SELECTED" : ""; ?>>Slovakia</option><option value="158"<? echo $inp_14=="Slovenia" ? " SELECTED" : ""; ?>>Slovenia</option><option value="159"<? echo $inp_14=="Solomon Islands" ? " SELECTED" : ""; ?>>Solomon Islands</option><option value="160"<? echo $inp_14=="Somalia" ? " SELECTED" : ""; ?>>Somalia</option><option value="161"<? echo $inp_14=="South Africa" ? " SELECTED" : ""; ?>>South Africa</option><option value="162"<? echo $inp_14=="Spain" ? " SELECTED" : ""; ?>>Spain</option><option value="163"<? echo $inp_14=="Sri Lanka" ? " SELECTED" : ""; ?>>Sri Lanka</option><option value="145"<? echo $inp_14=="St. Kitts and Nevis" ? " SELECTED" : ""; ?>>St. Kitts and Nevis</option><option value="146"<? echo $inp_14=="St. Lucia" ? " SELECTED" : ""; ?>>St. Lucia</option><option value="147"<? echo $inp_14=="St. Vincent and The Grenadines" ? " SELECTED" : ""; ?>>St. Vincent and The Grenadines</option><option value="164"<? echo $inp_14=="Sudan" ? " SELECTED" : ""; ?>>Sudan</option><option value="165"<? echo $inp_14=="Suriname" ? " SELECTED" : ""; ?>>Suriname</option><option value="166"<? echo $inp_14=="Swaziland" ? " SELECTED" : ""; ?>>Swaziland</option><option value="167"<? echo $inp_14=="Sweden" ? " SELECTED" : ""; ?>>Sweden</option><option value="169"<? echo $inp_14=="Syria" ? " SELECTED" : ""; ?>>Syria</option><option value="170"<? echo $inp_14=="Taiwan" ? " SELECTED" : ""; ?>>Taiwan</option><option value="171"<? echo $inp_14=="Tajikistan" ? " SELECTED" : ""; ?>>Tajikistan</option><option value="172"<? echo $inp_14=="Tanzania" ? " SELECTED" : ""; ?>>Tanzania</option><option value="173"<? echo $inp_14=="Thailand" ? " SELECTED" : ""; ?>>Thailand</option><option value="124"<? echo $inp_14=="The Netherlands" ? " SELECTED" : ""; ?>>The Netherlands</option><option value="174"<? echo $inp_14=="Togo" ? " SELECTED" : ""; ?>>Togo</option><option value="175"<? echo $inp_14=="Tonga" ? " SELECTED" : ""; ?>>Tonga</option><option value="176"<? echo $inp_14=="Trinidad and Tobago" ? " SELECTED" : ""; ?>>Trinidad and Tobago</option><option value="177"<? echo $inp_14=="Tunisia" ? " SELECTED" : ""; ?>>Tunisia</option><option value="178"<? echo $inp_14=="Turkey" ? " SELECTED" : ""; ?>>Turkey</option><option value="179"<? echo $inp_14=="Turkmenistan" ? " SELECTED" : ""; ?>>Turkmenistan</option><option value="180"<? echo $inp_14=="Tuvalu" ? " SELECTED" : ""; ?>>Tuvalu</option><option value="181"<? echo $inp_14=="Uganda" ? " SELECTED" : ""; ?>>Uganda</option><option value="182"<? echo $inp_14=="Ukraine" ? " SELECTED" : ""; ?>>Ukraine</option><option value="183"<? echo $inp_14=="United Arab Emirates" ? " SELECTED" : ""; ?>>United Arab Emirates</option><option value="184"<? echo $inp_14=="United Kingdom" ? " SELECTED" : ""; ?>>United Kingdom</option><option value="185"<? echo $inp_14=="United States of America" ? " SELECTED" : ""; ?>>United States of America</option><option value="186"<? echo $inp_14=="Uruguay" ? " SELECTED" : ""; ?>>Uruguay</option><option value="187"<? echo $inp_14=="Uzbekistan" ? " SELECTED" : ""; ?>>Uzbekistan</option><option value="188"<? echo $inp_14=="Vanuatu" ? " SELECTED" : ""; ?>>Vanuatu</option><option value="189"<? echo $inp_14=="Vatican City" ? " SELECTED" : ""; ?>>Vatican City</option><option value="190"<? echo $inp_14=="Venezuela" ? " SELECTED" : ""; ?>>Venezuela</option><option value="191"<? echo $inp_14=="Vietnam" ? " SELECTED" : ""; ?>>Vietnam</option><option value="199"<? echo $inp_14=="Virgin Islands" ? " SELECTED" : ""; ?>>Virgin Islands</option><option value="192"<? echo $inp_14=="Western Sahara" ? " SELECTED" : ""; ?>>Western Sahara</option><option value="193"<? echo $inp_14=="Yemen" ? " SELECTED" : ""; ?>>Yemen</option><option value="194"<? echo $inp_14=="Yugoslavia" ? " SELECTED" : ""; ?>>Yugoslavia</option><option value="195"<? echo $inp_14=="Zaire" ? " SELECTED" : ""; ?>>Zaire</option><option value="196"<? echo $inp_14=="Zambia" ? " SELECTED" : ""; ?>>Zambia</option><option value="197"<? echo $inp_14=="Zimbabwe" ? " SELECTED" : ""; ?>>Zimbabwe</option><option value="257"<? echo $inp_14=="Isle of Man" ? " SELECTED" : ""; ?>>Isle of Man</option><option value="260"<? echo $inp_14=="Åland Islands" ? " SELECTED" : ""; ?>>Åland Islands</option><option value="261"<? echo $inp_14=="Anguilla" ? " SELECTED" : ""; ?>>Anguilla</option><option value="262"<? echo $inp_14=="Aruba" ? " SELECTED" : ""; ?>>Aruba</option><option value="263"<? echo $inp_14=="Bermuda" ? " SELECTED" : ""; ?>>Bermuda</option><option value="264"<? echo $inp_14=="Bouvet Island" ? " SELECTED" : ""; ?>>Bouvet Island</option><option value="265"<? echo $inp_14=="British Indian Ocean Territory" ? " SELECTED" : ""; ?>>British Indian Ocean Territory</option><option value="266"<? echo $inp_14=="Cayman Islands" ? " SELECTED" : ""; ?>>Cayman Islands</option><option value="267"<? echo $inp_14=="Christmas Island" ? " SELECTED" : ""; ?>>Christmas Island</option><option value="268"<? echo $inp_14=="Cocos (Keeling) Islands" ? " SELECTED" : ""; ?>>Cocos (Keeling) Islands</option><option value="269"<? echo $inp_14=="Cook Islands" ? " SELECTED" : ""; ?>>Cook Islands</option><option value="270"<? echo $inp_14=="Curaçao" ? " SELECTED" : ""; ?>>Curaçao</option><option value="271"<? echo $inp_14=="Falkland Islands" ? " SELECTED" : ""; ?>>Falkland Islands</option><option value="272"<? echo $inp_14=="French Guiana" ? " SELECTED" : ""; ?>>French Guiana</option><option value="273"<? echo $inp_14=="French Polynesia" ? " SELECTED" : ""; ?>>French Polynesia</option><option value="274"<? echo $inp_14=="French Southern and Antarctic Lands" ? " SELECTED" : ""; ?>>French Southern and Antarctic Lands</option><option value="275"<? echo $inp_14=="Guadeloupe" ? " SELECTED" : ""; ?>>Guadeloupe</option><option value="276"<? echo $inp_14=="Guernsey" ? " SELECTED" : ""; ?>>Guernsey</option><option value="277"<? echo $inp_14=="Heard Island and McDonald Islands" ? " SELECTED" : ""; ?>>Heard Island and McDonald Islands</option><option value="278"<? echo $inp_14=="Jersey" ? " SELECTED" : ""; ?>>Jersey</option><option value="279"<? echo $inp_14=="Martinique" ? " SELECTED" : ""; ?>>Martinique</option><option value="280"<? echo $inp_14=="Mayotte" ? " SELECTED" : ""; ?>>Mayotte</option><option value="281"<? echo $inp_14=="Montserrat" ? " SELECTED" : ""; ?>>Montserrat</option><option value="282"<? echo $inp_14=="New Caledonia" ? " SELECTED" : ""; ?>>New Caledonia</option><option value="283"<? echo $inp_14=="Niue" ? " SELECTED" : ""; ?>>Niue</option><option value="284"<? echo $inp_14=="Norfolk Island" ? " SELECTED" : ""; ?>>Norfolk Island</option><option value="285"<? echo $inp_14=="Palestinian territories" ? " SELECTED" : ""; ?>>Palestinian territories</option><option value="286"<? echo $inp_14=="Pitcairn Islands" ? " SELECTED" : ""; ?>>Pitcairn Islands</option><option value="287"<? echo $inp_14=="Réunion" ? " SELECTED" : ""; ?>>Réunion</option><option value="288"<? echo $inp_14=="Saint Barthélemy" ? " SELECTED" : ""; ?>>Saint Barthélemy</option><option value="289"<? echo $inp_14=="Saint Helena" ? " SELECTED" : ""; ?>>Saint Helena</option><option value="290"<? echo $inp_14=="Saint Martin" ? " SELECTED" : ""; ?>>Saint Martin</option><option value="291"<? echo $inp_14=="Saint Pierre and Miquelon" ? " SELECTED" : ""; ?>>Saint Pierre and Miquelon</option><option value="292"<? echo $inp_14=="Sint Maarten" ? " SELECTED" : ""; ?>>Sint Maarten</option><option value="293"<? echo $inp_14=="South Georgia and the South Sandwich Islands" ? " SELECTED" : ""; ?>>South Georgia and the South Sandwich Islands</option><option value="294"<? echo $inp_14=="South Sudan" ? " SELECTED" : ""; ?>>South Sudan</option><option value="295"<? echo $inp_14=="Svalbard and Jan Mayen" ? " SELECTED" : ""; ?>>Svalbard and Jan Mayen</option><option value="296"<? echo $inp_14=="Tokelau" ? " SELECTED" : ""; ?>>Tokelau</option><option value="297"<? echo $inp_14=="Turks and Caicos Islands" ? " SELECTED" : ""; ?>>Turks and Caicos Islands</option><option value="298"<? echo $inp_14=="United States Minor Outlying Islands" ? " SELECTED" : ""; ?>>United States Minor Outlying Islands</option><option value="299"<? echo $inp_14=="Wallis and Futuna" ? " SELECTED" : ""; ?>>Wallis and Futuna</option><option value="300"<? echo $inp_14=="Faroe Islands" ? " SELECTED" : ""; ?>>Faroe Islands</option></select><br>
-    <?$ints = array();function cmp($a, $b) { if (strlen($a) == strlen($b)) { return 0; } return (strlen($a) > strlen($b)) ? -1 : 1;}uasort($ints, "cmp"); $myints = array();foreach($ints as $key => $value) { $pos = strpos($interest[0], $value); if($pos !== false) {$myints[] = $key;$interest[0] = substr($interest[0],0,$pos) . substr($interest[0],$pos+strlen($value),strlen($interest[0])); }}?><input aria-label='Register' tabindex='993' type=button onclick="javascript:SubmitIt()" name="submit1" value="Register"></form>
-    <script language="javascript">
-    <!--
-    function onbeforesubmit()
-    {
-    return true;
-    }
-    //-->
-    </script>
-    <script language="javascript">
-    <!--
-      var error;
-    var form_lanuage = 'en';
-    function is_1_valid(input)
-    {
-      if(input == "")
-      {
-        error += "First Name: missing data!\n";
-        return false;
-      }
-    
-      return true;
-    }
-    function is_2_valid(input)
-    {
-      if(input == "")
-      {
-        error += "Last Name: missing data!\n";
-        return false;
-      }
-    
-      return true;
-    }
-    function is_3_valid(input)
-    {
-      if(input == "")
-      {
-        error += "Email: missing data!\n";
-        return false;
-      }
-    
-      return true;
-    }
-    function is_37_valid(input)
-    {
-      if(input == "")
-      {
-        error += "Mobile: missing data!\n";
-        return false;
-      }
-    
-      return true;
-    }
-    
-    function CheckInputs()
-    {
-      var check_ok = true;
-      error = "Wrong input!\n";
-      check_ok = (is_1_valid(document.ProfileForm.inp_1.value) && check_ok);
-      check_ok = (is_2_valid(document.ProfileForm.inp_2.value) && check_ok);
-      check_ok = (is_3_valid(document.ProfileForm.inp_3.value) && check_ok);
-      check_ok = (is_37_valid(document.ProfileForm.inp_37.value) && check_ok);
-      if(check_ok == false)
-        alert(error);
-      return check_ok;
-    }
-    //-->
-    </script>
-    
-    
-    <script language="javascript">
-    function SubmitIt(){
-                    if(CheckInputs() == true){
-                                    if(window.onbeforesubmit)
-                                                    onbeforesubmit();
-                                    document.ProfileForm.submit();
-                    }
-    }
-    
-    function MailIt(){
-                    if(CheckInputs()){
-                                    if((document.ProfileForm.subject.value=='') || (document.ProfileForm.msg.value==''))
-                                                    alert('Bitte f\u00fcr Sie die Nachrichtenfelder aus!');
-                                    else
-                                                    document.ProfileForm.submit();
-        }
-    }
-    
-    function FieldWithName(frm, fieldname, numofield)
-    {
-        if(!numofield)
-            numofield = 0;
-        field_count = 0;
-        for(i = 0; i < frm.elements.length; ++i)
-        {
-            if(frm.elements[i].name == fieldname)
-            {
-                if(field_count == numofield)
-                    return frm.elements[i];
-                else
-                    field_count++;
-            }
-        }
-    }
-    function NumChecked(frm, fieldname)
-    {
-        var count = 0;
-        for(i = 0; i < frm.elements.length; ++i)
-        {
-            if(frm.elements[i].name == fieldname && frm.elements[i].checked == true)		
-                ++count;
-        }
-        return count;
-    }
-    function NumSel(field)
-    {
-        var count = 0;
-        for(i = 0; i < field.length; ++i)
-            if(field[i].selected == true) ++count;
-        return count;
-    }
-    </script>
-    
-    <script language="javascript">
-    var multiFields = new Array();
-    var dateFields = new Array();
-    multiFields["interest[]"] = "interest"
-    multiFields["optin"] = "optin"
-    var arr_interest = new Array();
-    </script><? if($alertbox != "") { echo "\r\n<script language=\"javascript\">\r\nalert(\"$alertbox\");</script>"; } ?>
+
+  <h1>E-Commerce Commands</h1>
+  <button onclick="viewEvent()">View Event</button>
+  <button onclick="cartEvent()">Cart Event</button>
+  <button onclick="categoryEvent()">Category Event</button>
+  <!-- <button onclick="purchaseEvent()">Purchase Event</button> -->
 </body>
 
 <script type="text/javascript">
-  function sendEvents() {
-    ScarabQueue.push(['setCustomerId', 'ef4656c5-5cc1-4100-81d1-994f8b31210d']);
+  function viewEvent() {
+    ScarabQueue.push(['setEmail', 't.mandoloni@reply.it']);
     ScarabQueue.push(['view', 'FINASPX']);
+    ScarabQueue.push(['go']);
+  }
+</script>
+
+<script type="text/javascript">
+  function cartEvent() {
+    ScarabQueue.push(['setEmail', 't.mandoloni@reply.it']);
+    ScarabQueue.push(['cart', [
+      { item: 'FINASPX', price: 75, quantity: 2 }
+    ]]);
+    ScarabQueue.push(['go']);
+  }
+</script>
+
+<script type="text/javascript">
+  function categoryEvent() {
+    ScarabQueue.push(['setEmail', 't.mandoloni@reply.it']);
+    ScarabQueue.push(['category', 'Respiratory System']);
+    ScarabQueue.push(['go']);
+  }
+</script>
+
+<script type="text/javascript">
+  function purchaseEvent() {
+    ScarabQueue.push(['setEmail', 't.mandoloni@reply.it']);
+    ScarabQueue.push(['purchase', {
+      orderId: '231213',
+      items: [
+        { item: 'FINASPX', price: 75, quantity: 2 }
+      ]
+    }]);
     ScarabQueue.push(['go']);
   }
 </script>
