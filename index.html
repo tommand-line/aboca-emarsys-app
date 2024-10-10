@@ -96,6 +96,10 @@ x-frame-options: DENY</code></pre>
   <button onclick="cartEvent()">Cart Event</button>
   <button onclick="categoryEvent()">Category Event</button>
   <!-- <button onclick="purchaseEvent()">Purchase Event</button> -->
+  <h1>Interaction Commands</h1>
+  <button onclick="searchEvent()">View Event</button>
+  <button onclick="currencyEvent()">View Event</button>
+  <button onclick="languageEvent()">View Event</button>
 </body>
 
 <script type="text/javascript">
@@ -133,6 +137,30 @@ x-frame-options: DENY</code></pre>
         { item: 'FINASPX', price: 75, quantity: 2 }
       ]
     }]);
+    ScarabQueue.push(['go']);
+  }
+</script>
+
+<script type="text/javascript">
+  function searchEvent() {
+    ScarabQueue.push(['setEmail', 't.mandoloni@reply.it']);
+    ScarabQueue.push(['searchTerm', "Aboca"]);
+    ScarabQueue.push(['go']);
+  }
+</script>
+
+<script type="text/javascript">
+  function currencyEvent() {
+    ScarabQueue.push(['setEmail', 't.mandoloni@reply.it']);
+    ScarabQueue.push(['displayCurrency', "USD"]);
+    ScarabQueue.push(['go']);
+  }
+</script>
+
+<script type="text/javascript">
+  function languageEvent() {
+    ScarabQueue.push(['setEmail', 't.mandoloni@reply.it']);
+    ScarabQueue.push(['language', "IT"]);
     ScarabQueue.push(['go']);
   }
 </script>
