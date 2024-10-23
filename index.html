@@ -100,7 +100,19 @@ x-frame-options: DENY</code></pre>
   <button onclick="searchEvent()">Search Event</button>
   <button onclick="currencyEvent()">Currency Event</button>
   <button onclick="languageEvent()">Language Event</button>
+  <h1>Custom Commands</h1>
+  <button onclick="customEvent()">Custom Event</button>
 </body>
+
+<script type="text/javascript">
+  function customEvent() {
+    ScarabQueue.push(['setCustomerId', '1234567890']);
+    ScarabQueue.push(['tag', 'click_event', {
+      age: 18
+    }]);
+    ScarabQueue.push(['go']);
+  }
+</script>
 
 <script type="text/javascript">
   function viewEvent() {
