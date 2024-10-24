@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script defer src="/_vercel/insights/script.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css" />
-  <title>Vercel HTML Starter</title>
+  <title>Aboca Web Extend Page</title>
   <meta name="description" content="High-performance HTML based website template." />
 </head>
 
@@ -22,7 +22,11 @@
 </script>
 
 <body>
-  <h1>Vercel HTML Starter</h1>
+  <img src="./Colilen IBS per calmare mal di pancia frequente, gonfiore, diarrea e  stitichezza.png" alt="logo">
+  <img src="./ECCO UN LIBRO CHE TI CAMBIA LA VITA - Aboca Life Magazine.png" alt="immagine">
+  <h1>Partecipa al nostro percorso per migliorare le tue abitudini alimentari!</h1>
+  <button onclick="submitEvent()">Iscriviti Ora</button>
+  <!--<h1>Vercel HTML Starter</h1>
   <p>
     This template is a simple, but powerful single
     <code>index.html</code> file deployed to
@@ -101,9 +105,22 @@ x-frame-options: DENY</code></pre>
   <button onclick="currencyEvent()">Currency Event</button>
   <button onclick="languageEvent()">Language Event</button>
   <h1>Custom Commands</h1>
-  <button onclick="customEvent()">Custom Event</button>
+  <button onclick="customEvent()">Custom Event</button>-->
 </body>
 
+<script type="text/javascript">
+  function customEvent() {
+    ScarabQueue.push(['setCustomerId', '987654321']);
+    ScarabQueue.push(['tag', 'submit_event', {
+      source: 'aboca test page',
+      topic: 'iscrizione percorso alimentare',
+      id_percorso: 10
+    }]);
+    ScarabQueue.push(['go']);
+  }
+</script>
+
+<!--
 <script type="text/javascript">
   function customEvent() {
     ScarabQueue.push(['setCustomerId', '1234567890']);
@@ -176,5 +193,6 @@ x-frame-options: DENY</code></pre>
     ScarabQueue.push(['go']);
   }
 </script>
+-->
 
 </html>
