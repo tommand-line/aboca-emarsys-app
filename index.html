@@ -8,6 +8,64 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css" />
   <title>Aboca Web Extend Page</title>
   <meta name="description" content="High-performance HTML based website template." />
+  <style>
+    body {
+      text-align: center;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 20px;
+      max-width: 80%;
+      scroll-snap-type: x mandatory;
+      margin: 0 auto;
+      align-self: auto center;
+    }
+
+    .carousel img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      scroll-snap-align: start;
+    }
+
+    .carousel img:hover {
+      transform: scale(1.1);
+    }
+
+    .carousel-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .carousel-item button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
 </head>
 
 <script type="text/javascript">
@@ -26,6 +84,24 @@
   <img src="./ECCO UN LIBRO CHE TI CAMBIA LA VITA - Aboca Life Magazine.png" alt="immagine">
   <h1>Partecipa al nostro percorso per migliorare le tue abitudini alimentari!</h1>
   <button onclick="submitEvent()">Iscriviti Ora</button>
+
+  <div class="carousel">
+    <div class="carousel-item">
+      <img src="./FITONASAL_PED.NEBUL.jpeg" alt="fitonasal" onclick="viewEvent()">
+      <h3>Fitonasal Spray</h3>
+      <button onclick="cartEvent()">Aggiungi Al Carrello</button>
+    </div>
+    <div class="carousel-item">
+      <img src="./FITONASAL_PED.NEBUL.jpeg" alt="fitonasal" onclick="viewEvent()">
+      <h3>Fitonasal Spray</h3>
+      <button onclick="cartEvent()">Aggiungi Al Carrello</button>
+    </div>
+    <div class="carousel-item">
+      <img src="./FITONASAL_PED.NEBUL.jpeg" alt="fitonasal" onclick="viewEvent()">
+      <h3>Fitonasal Spray</h3>
+      <button onclick="cartEvent()">Aggiungi Al Carrello</button>
+    </div>
+  </div>
   <!--<h1>Vercel HTML Starter</h1>
   <p>
     This template is a simple, but powerful single
@@ -118,6 +194,22 @@ x-frame-options: DENY</code></pre>
     }]);
     ScarabQueue.push(['go']);
     alert("Grazie Per L'Iscrizione")
+  }
+
+  function viewEvent() {
+    ScarabQueue.push(['setCustomerId', '987654321']);
+    ScarabQueue.push(['view', 'FINASPX']);
+    ScarabQueue.push(['go']);
+    alert("Hai Visualizzato Fitonasal Spray")
+  }
+
+  function cartEvent() {
+    ScarabQueue.push(['setCustomerId', '987654321']);
+    ScarabQueue.push(['cart', [
+      { item: 'FINASPX', price: 5, quantity: 1 }
+    ]]);
+    ScarabQueue.push(['go']);
+    alert("Fitonasal Spray Aggiunto Al Carrello (1 x 5 euro)")
   }
 </script>
 
