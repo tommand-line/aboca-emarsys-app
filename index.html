@@ -87,19 +87,19 @@
 
   <div class="carousel">
     <div class="carousel-item">
-      <img src="./FITONASAL_PED.NEBUL.jpeg" alt="fitonasal" onclick="viewEvent()">
+      <img src="./FITONASAL_PED.NEBUL.jpeg" alt="fitonasal" onclick="viewEvent1()">
       <h3>Fitonasal Spray</h3>
-      <button onclick="cartEvent()">Aggiungi Al Carrello</button>
+      <button onclick="cartEvent1()">Aggiungi Al Carrello</button>
     </div>
     <div class="carousel-item">
-      <img src="./FITONASAL_PED.NEBUL.jpeg" alt="fitonasal" onclick="viewEvent()">
-      <h3>Fitonasal Spray</h3>
-      <button onclick="cartEvent()">Aggiungi Al Carrello</button>
+      <img src="./sedivitax_notte_advacend_capsule_IT.png" alt="sedivitax" onclick="viewEvent2()">
+      <h3>Sedivitax Capsule</h3>
+      <button onclick="cartEvent2()">Aggiungi Al Carrello</button>
     </div>
     <div class="carousel-item">
-      <img src="./FITONASAL_PED.NEBUL.jpeg" alt="fitonasal" onclick="viewEvent()">
-      <h3>Fitonasal Spray</h3>
-      <button onclick="cartEvent()">Aggiungi Al Carrello</button>
+      <img src="./Golamir_spray_no_alcool_IT.png" alt="golamir" onclick="viewEvent3()">
+      <h3>Golamir Spray</h3>
+      <button onclick="cartEvent3()">Aggiungi Al Carrello</button>
     </div>
   </div>
   <!--<h1>Vercel HTML Starter</h1>
@@ -196,20 +196,55 @@ x-frame-options: DENY</code></pre>
     alert("Grazie Per L'Iscrizione")
   }
 
-  function viewEvent() {
+  function viewEvent1() {
     ScarabQueue.push(['setCustomerId', '987654321']);
     ScarabQueue.push(['view', 'FINASPX']);
+    ScarabQueue.push(['category', 'Respiratory System']);
     ScarabQueue.push(['go']);
     alert("Hai Visualizzato Fitonasal Spray")
   }
 
-  function cartEvent() {
+  function cartEvent1() {
     ScarabQueue.push(['setCustomerId', '987654321']);
     ScarabQueue.push(['cart', [
       { item: 'FINASPX', price: 5, quantity: 1 }
     ]]);
     ScarabQueue.push(['go']);
     alert("Fitonasal Spray Aggiunto Al Carrello (1 x 5 euro)")
+  }
+
+  function viewEvent2() {
+    ScarabQueue.push(['setCustomerId', '987654321']);
+    ScarabQueue.push(['view', 'SEPROCOX']);
+    ScarabQueue.push(['category', 'Sonno e Serenità > Disturbi del Sonno']);
+    ScarabQueue.push(['go']);
+    alert("Hai Visualizzato Sedivitax Capsule")
+  }
+
+  function cartEvent2() {
+    ScarabQueue.push(['setCustomerId', '987654321']);
+    ScarabQueue.push(['cart', [
+      { item: 'SEPROCOX', price: 5, quantity: 1 }
+    ]]);
+    ScarabQueue.push(['go']);
+    alert("Sedivitax Capsule Aggiunto Al Carrello (1 x 5 euro)")
+  }
+
+  function viewEvent3() {
+    ScarabQueue.push(['setCustomerId', '987654321']);
+    ScarabQueue.push(['view', 'GOMI_SPX']);
+    ScarabQueue.push(['category', 'Vie Respiratorie > Mal di Gola e Cavo Orale']);
+    ScarabQueue.push(['go']);
+    alert("Hai Visualizzato Golamir Spray")
+  }
+
+  function cartEvent3() {
+    ScarabQueue.push(['setCustomerId', '987654321']);
+    ScarabQueue.push(['cart', [
+      { item: 'GOMI_SPX', price: 5, quantity: 1 }
+    ]]);
+    ScarabQueue.push(['go']);
+    alert("Golamir Spray Aggiunto Al Carrello (1 x 5 euro)")
   }
 </script>
 
